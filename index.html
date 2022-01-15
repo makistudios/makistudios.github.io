@@ -1,43 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
-  <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="vibingtownflutter">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>vibingtownflutter</title>
   <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" src="images/icon.png">
+  <title>Vibing Town</title>
 </head>
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '1528497352';
+    var serviceWorkerVersion = '1224082733';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -51,11 +34,7 @@
     }
 
     if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
       window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
@@ -68,24 +47,17 @@
               });
             }
             if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
               waitForActivation(reg.installing || reg.waiting);
             } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
               console.log('New service worker available.');
               reg.update();
               waitForActivation(reg.installing);
             } else {
-              // Existing service worker is still good.
               console.log('Loading app from service worker.');
               loadMainDartJs();
             }
           });
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
         setTimeout(() => {
           if (!scriptLoaded) {
             console.warn(
@@ -96,9 +68,84 @@
         }, 4000);
       });
     } else {
-      // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
   </script>
+          <div class="progress">
+            <img class="main" src="images/loading.gif">
+            <div id="loadingText"></div>
+          </div>
+          <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <!-- <img src="Dunpressed.png"> --> 
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn"><div id="Ba"></div></div>
+
+                    <a href="#">Museum</a>
+                    <a href="#">Library</a>
+                    <a href="#">Shrine</a>
+                    <a href="#">Bank</a>
+                    <a href="#">Bazaar</a>
+                    <a href="#">Carnival</a>
+                    <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+                    <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+                    <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+                </ul>
+                <div class="icon">
+                    <a href="https://discord.com/invite/monkettes"><div id="D"></div></a>
+                    <a href="https://twitter.com/MonkettesNFT"><div id="T"></div></a>
+                    <a href="https://magiceden.io/marketplace/solana_monkette_busines"><div id="J"></div></a>
+                    <div id="B"></div>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            const body = document.querySelector("body");
+            const navbar = document.querySelector(".navbar");
+            const menuBtn = document.querySelector("#B");
+            const cancelBtn = document.querySelector(".cancel-btn");
+            menuBtn.onclick = () => {
+                navbar.classList.add("show");
+                menuBtn.classList.add("hide");
+                body.classList.add("disabled");
+            }
+            cancelBtn.onclick = () => {
+                body.classList.remove("disabled");
+                navbar.classList.remove("show");
+                menuBtn.classList.remove("hide");
+            }
+            window.onscroll = () => {
+                this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+            }
+
+            var loaded = false;
+            var texts = [ "Cooking up the website", "Waking up the frens", "Vibing while waiting", "Wen Website", "gmi..."];
+            document.getElementById("loadingText").innerHTML = texts[Math.floor(Math.random() * texts.length)];
+            
+            function ChangeText()
+            {
+              let currentText = document.getElementById("loadingText").innerHTML;
+              let currentIndex = texts.findIndex((e) => e == currentText.toString());
+              let newIndex = (currentIndex + 1) % texts.length;
+              document.getElementById("loadingText").innerHTML = texts[newIndex];
+              setTimeout(() => {
+                if(!loaded)
+                  ChangeText();
+              }, 500);
+            }
+
+            setTimeout(() => {
+              ChangeText();
+            }, 500);
+
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function () {
+                navigator.serviceWorker.register('flutter_service_worker.js');
+              });
+            }
+        </script>
 </body>
 </html>
