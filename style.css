@@ -10,7 +10,7 @@ body{
   background-color: #ffffff;
 }
 
-.main{
+.bird-image{
   width: 15rem;
 }
 
@@ -25,7 +25,7 @@ body{
 #loadingText{
   color: black;
   position: absolute;
-  font-size: 5rem;
+  font-size: 3rem;
   top: 65%;
 }
 
@@ -179,41 +179,27 @@ a {
     align-items: center;
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1200px) {
     .content {
         padding: 0 60px;
     }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
     .content {
         padding: 0 40px;
     }
-
-    #loadingText{
-        color: black;
-        position: absolute;
-        font-size: 3rem;
-        top: 65%;
-      }
 }
-@media (max-width: 900px) {
-    .content {
-        padding: 0 30px;
+@media (max-width: 768px) {
+    .bird-image{
+        width: 12rem;
     }
-}
-@media (max-width: 868px) {
+    #loadingText{
+        font-size: 2rem;
+    }
     .fas {
         width: 10px;
         height: 10px;
     }
-
-    #loadingText{
-        color: black;
-        position: absolute;
-        font-size: 1rem;
-        top: 65%;
-      }
-
     body.disabled{
         overflow: hidden;
       }
@@ -256,4 +242,8 @@ a {
       .navbar.show .menu-list a{
         margin-left: 0px;
       }
+}
+
+@media (max-width: 480px) {
+
 }
