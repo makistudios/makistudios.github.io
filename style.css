@@ -44,14 +44,19 @@ a {
     display: inline-block;
     background: url("images/Dunpressed.png") no-repeat;
     background-position: center;
+    background-size: 45px 45px;
 }
 
 #D:hover {
     background: url("images/Dhover.png") no-repeat;
+    background-position: center;
+    background-size: 45px 45px;
 }
 
 #D:active {
     background: url("images/Dpressed.png") no-repeat;
+    background-position: center;
+    background-size: 45px 45px;
 }
 
 #J {
@@ -60,14 +65,19 @@ a {
     display: inline-block;
     background: url("images/Junpressed.png") no-repeat;
     background-position: center;
+    background-size: 100px 45px;
 }
 
 #J:hover {
     background: url("images/Jhover.png") no-repeat;
+    background-position: center;
+    background-size: 100px 45px;
 }
 
 #J:active {
     background: url("images/Jpressed.png") no-repeat;
+    background-position: center;
+    background-size: 100px 45px;
 }
 
 #B {
@@ -76,14 +86,19 @@ a {
     display: inline-block;
     background: url("images/Bunpressed.png") no-repeat;
     background-position: center;
+    background-size: 48px 48px;
 }
 
 #B:hover {
     background: url("images/Bhover.png") no-repeat;
+    background-position: center;
+    background-size: 48px 48px;
 }
 
 #B:active {
     background: url("images/Bpressed.png") no-repeat;
+    background-position: center;
+    background-size: 48px 48px;
 }
 
 #T {
@@ -92,14 +107,19 @@ a {
     display: inline-block;
     background: url("images/Tunpressed.png") no-repeat;
     background-position: center;
+    background-size: 45px 45px;
 }
 
 #T:hover {
     background: url("images/Thover.png") no-repeat;
+    background-position: center;
+    background-size: 45px 45px;
 }
 
 #T:active {
     background: url("images/Tpressed.png") no-repeat;
+    background-position: center;
+    background-size: 45px 45px;
 }
 
 #Ba {
@@ -108,14 +128,19 @@ a {
     display: inline-block;
     background: url("images/Baunpressed.png") no-repeat;
     background-position: center;
+    background-size: 38px 28px;
 }
 
 #Ba:hover {
     background: url("images/Bahover.png") no-repeat;
+    background-position: center;
+    background-size: 38px 28px;
 }
 
 #Ba:active {
     background: url("images/Bapressed.png") no-repeat;
+    background-position: center;
+    background-size: 38px 28px;
 }
 
 .content{
