@@ -3,7 +3,6 @@
     src: url(fonts/small_pixel-7.ttf);
 }
 
-
 html,
 body{
   height: 100%;
@@ -186,7 +185,11 @@ a {
 }
 @media (max-width: 1024px) {
     .content {
-        padding: 0 40px;
+        padding: 0 20px;
+    }
+
+    .menu-list a {
+        font-size: 22px;
     }
 }
 @media (max-width: 768px) {
