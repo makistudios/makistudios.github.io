@@ -26,6 +26,7 @@ body{
   position: absolute;
   font-size: 3rem;
   top: 65%;
+  text-align: center;
 }
 
 * {
