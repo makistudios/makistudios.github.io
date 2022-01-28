@@ -48077,7 +48077,7 @@ $.Hq=A.cD("mapSize")
 $.uK=A.cD("cameraPos")
 $.aj4=A.a(["baby_monkette.png","hamster.png","owl.png","doggo.png","cat.png","fokiballena.png","fox.png","frog.png","ninfa.png"],t.s)
 $.a1J=function(){var s=t.G
-return A.a([A.a(["BANK","Where you trade \n  your tokens","https://token.vibing.studio",8],s),A.a(["MUSEUM","Here we collect our\nmost precious items","https://solsteads.com/71-ape-lane",7.5],s),A.a(["CARNIVAL","Games coming soon","",8],s),A.a(["BAZAAR","Spend your \n$VIBE here!","https://vibe.market",8],s),A.a(["SHRINE","Under construction","",8],s),A.a(["LIBRARY"," Information about the \n  monkettes universe","https://solanamonkette.business",7],s)],t.ri)}()
+return A.a([A.a(["BANK","Where you trade \n  your tokens","https://token.vibe.market/",8],s),A.a(["MUSEUM","Here we collect our\nmost precious items","https://solsteads.com/71-ape-lane",7.5],s),A.a(["CARNIVAL","Games coming soon","",8],s),A.a(["BAZAAR","Spend your \n$VIBE here!","https://vibe.market",8],s),A.a(["SHRINE","Under construction","",8],s),A.a(["LIBRARY"," Information about the \n  monkettes universe","https://information.monkettes.io/",7],s)],t.ri)}()
 $.a1V=!0})();(function lazyInitializers(){var s=hunkHelpers.lazyFinal,r=hunkHelpers.lazy
 s($,"am2","a8O",()=>new A.Ps(A.t(t.N,t.BO),A.t(t.S,t.Q)))
 s($,"al2","eW",()=>A.ai_(A.ZV().navigator.vendor,B.c.T9(A.ZV().navigator.userAgent)))
