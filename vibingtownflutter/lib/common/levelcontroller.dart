@@ -702,12 +702,12 @@ var animatedDecorations = [
 ];
 
 var buildingTexts = [
-  ["BANK", "Where you trade \n  your tokens", "https://token.vibing.studio", 8],
+  ["BANK", "Where you trade \n  your tokens", "https://token.vibe.market/", 8],
   ["MUSEUM", "Here we collect our\nmost precious items", "https://solsteads.com/71-ape-lane", 7.5],
   ["CARNIVAL", "Games coming soon", "", 8],
   ["BAZAAR", "Spend your \n\$VIBE here!", "https://vibe.market", 8],
   ["SHRINE", "Under construction", "", 8],
-  ["LIBRARY", " Information about the \n  monkettes universe", "https://solanamonkette.business", 7],
+  ["LIBRARY", " Information about the \n  monkettes universe", "https://information.monkettes.io/", 7],
 ];
 
 late bool sensorActive = true;
